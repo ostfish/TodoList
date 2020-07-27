@@ -50,228 +50,30 @@
         <div class="box-3">
           <div class="box-3-1">
             <ul class="table-2">
-              <template v-for="index in projects"></template>
-
-              <!--
-    <div id="app" v-if="no">
-      <input id="add-input" 
-      v-model="todoText" 
-      @keyup.enter="addTodo" 
-      placeholder="输入新任务" />
-      <ul>
-        <template v-for="(todoItem, index) in todoList">
-          <todo
-            :todoItem="todoItem"
-            :index="index"
-            :key="index"
-            @change="(value) => {onChange(index, value)}"
-          />
-        </template>
-      </ul>
-      {{ info }}
-    </div>
-              -->
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                        <!--{{gettitle(0).title}}-->
+              <template v-for="items in projects">
+                <li>
+                  <div class="l">
+                    <div class="l-1">
+                      <a href="items.productImage" target="_blank">
+                        <img src="items.productImage" class="p-1" />
                       </a>
                     </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
+                    <div class="l-2">
+                      <div class="l-2-1">
+                        <a href="2" target="_blank">
+                          <div>{{items.title}}</div>
+                          <!--{{gettitle(0).title}}-->
+                        </a>
+                      </div>
+                      <div class="l-2-2">
+                        <span class="price-1">￥登录可见</span>
+                        <span class="price-2">￥登录可见</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="l">
-                  <div class="l-1">
-                    <a href="./assets/2.jpg" target="_blank">
-                      <img src="./assets/2.jpg" class="p-1" />
-                    </a>
-                  </div>
-                  <div class="l-2">
-                    <div class="l-2-1">
-                      <a href="2" target="_blank">
-                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                      </a>
-                    </div>
-                    <div class="l-2-2">
-                      <span class="price-1">￥登录可见</span>
-                      <span class="price-2">￥登录可见</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
+                </li>
+              </template>
+            
             </ul>
           </div>
         </div>
@@ -302,7 +104,8 @@ export default {
         },
       })
       .then(function (response) {
-        that.projects = response.projects;
+        that.projects = response.data.data;
+        console.log(that.projects);
       });
   },
   methods: {
