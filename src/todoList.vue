@@ -1,57 +1,362 @@
 <template>
-  <div id="app">
-    <h2>Simply todolist - vuejs</h2>
-    <input id="add-input" v-model="todoText" @keyup.enter="addTodo" placeholder="do what?"/>
+  <div class="menu">
     <ul>
-      <todo v-for="(todoItem, index) in todoList" :todoItem="todoItem" :index="index"></todo>
+      <li>
+        <div class="box-1">
+          <span class="tback"></span>
+          <span class="title">汽车装饰</span>
+          <span class="icon-search"></span>
+        </div>
+      </li>
+      <!--/////////////////////////////////////////////-->
+      <li>
+        <div class="box-2">
+          <ul class="table-1">
+            <li class="sorts">
+              <a href=" 1">脚垫</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">油品分类</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">新五行养车</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">后备箱垫</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">方向盘套</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">置物箱</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">支架挂件</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">空气治理</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">营销辅助</a>
+            </li>
+            <li class="sorts">
+              <a href=" 1">头靠腰枕</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--/////////////////////////////////////////////-->
+      <li class="L-3">
+        <div class="box-3">
+          <div class="box-3-1">
+            <ul class="table-2">
+              <template v-for="index in projects"></template>
+
+              <!--
+    <div id="app" v-if="no">
+      <input id="add-input" 
+      v-model="todoText" 
+      @keyup.enter="addTodo" 
+      placeholder="输入新任务" />
+      <ul>
+        <template v-for="(todoItem, index) in todoList">
+          <todo
+            :todoItem="todoItem"
+            :index="index"
+            :key="index"
+            @change="(value) => {onChange(index, value)}"
+          />
+        </template>
+      </ul>
+      {{ info }}
+    </div>
+              -->
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                        <!--{{gettitle(0).title}}-->
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="l">
+                  <div class="l-1">
+                    <a href="./assets/2.jpg" target="_blank">
+                      <img src="./assets/2.jpg" class="p-1" />
+                    </a>
+                  </div>
+                  <div class="l-2">
+                    <div class="l-2-1">
+                      <a href="2" target="_blank">
+                        <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+                      </a>
+                    </div>
+                    <div class="l-2-2">
+                      <span class="price-1">￥登录可见</span>
+                      <span class="price-2">￥登录可见</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </template>
 
+
 <script>
-import Todo from './components/todo'
 export default {
-  name: 'todoList',
-  components: {
-    Todo
-  },
-  data () {
+  data() {
     return {
-      todoText: ''
-    }
+      url: "",
+      projects: [],
+    };
   },
-  computed: {
-    todoList () {
-      return this.$store.getters.todos
-    }
+  mounted() {
+    var that = this;
+    this.axios
+      .get("http://api.ecom.test.9daye.cn/api/v1/client/products", {
+        params: {
+          productCategoryId: 84,
+          page: 1,
+          size: 20,
+          paging: true,
+          id: 1777,
+        },
+      })
+      .then(function (response) {
+        that.projects = response.projects;
+      });
   },
   methods: {
-    addTodo () {
-      this.$store.commit('addTodo', this.todoText)
-      this.todoText = ''
+    gettitle(x) {
+      return mounted().data(x).title;
     },
-    deleteTodo (index) {
-      this.$store.commit('deleteTodo', index)
-    }
-  }
-}
+  },
+};
 </script>
 
+
+
+
 <style>
+@import "./style/main.css";
 body {
+  text-align: center;
   font-family: Helvetica, sans-serif;
+  margin: 0px;
+  height: 100%;
+  /*background-image: linear-gradient( #bee1f8,#fa8b8b);*/
+}
+
+.menu {
+  margin: 0px auto;
+  height: 100%;
+  min-width: 1000px;
+}
+
+li {
+  background-color: white;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  height: 100%;
+}
+
+/*h1 button {
+  height:35px;
+  font-family:"华文彩云";
+  color:rgb(0, 0, 0);
+  background-color:rgb(192, 247, 181);
+  
 }
 #app {
   width: 800px;
   margin: 30px auto;
 }
 #add-input {
-  width: 750px;
+  width: 300px;
   height: 35px;
   padding: 0 5px;
+  opacity: 0.6;
 }
-ul {
-  list-style: none;
-  padding: 0;
-}
+*/
 </style>

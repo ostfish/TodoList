@@ -1,10 +1,5 @@
 <template>
   <li class="todo-line">
-    <h3>
-    <!--
-      选项功能
-      modify 修改
-    -->
       <input class="checkbox" type="checkbox" @click="itemCheck(item)">
       <p class="item-label" v-bind:class="{ 'line-through': checked }">{{ index + 1 }} . {{ todoItem.text  }} </p>
       <p class="item-status" v-if="todoItem.done">√已完成</p>
@@ -13,7 +8,7 @@
       <button class="item-modify" @click="buttonCheck(item)">修改</button>
       <input class="modify-input" @keyup.enter="modifyTodo()" v-model="modifyText" placeholder="修改内容"  v-show="todoItem.click"/> 
       <button class="item-modify" @click="modifyTodo()"  v-show="todoItem.click">确认</button>
-    </h3>
+
   </li>
 </template>
 
